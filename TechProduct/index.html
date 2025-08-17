@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REALTECH – Smart Solutions for Modern Teams</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: '#6366F1',  // Purple
+            accent: '#06B6D4' // Teal
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white dark:bg-[#0F172A] text-gray-800 dark:text-gray-200 transition-colors duration-300 font-sans">
+
+  <!-- Navbar -->
+<header class="w-full fixed top-0 left-0 bg-white shadow-md z-50 text-black ">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <!-- Left Section: Hamburger (mobile) + Logo -->
+    <div class="flex items-center space-x-4">
+      <!-- Hamburger Button (Mobile only) -->
+      <button id="menu-btn" class="md:hidden text-gray-800 focus:outline-none">
+        <!-- Hamburger Icon -->
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <!-- Logo -->
+      <a href="#" class="flex items-center space-x-2">
+        <img src="logo.png" alt="Logo" class="w-10 h-10">
+        <span
+          class="text-2xl font-extrabold bg-gradient-to-r from-brand to-accent bg-clip-text text-transparent">
+          REALTECH
+        </span>
+      </a>
+    </div>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex space-x-6 font-semibold">
+      <a href="#features" class="relative group w-fit">
+        <span
+          class="transition duration-300 group-hover:bg-gradient-to-r group-hover:from-brand group-hover:to-accent group-hover:bg-clip-text group-hover:text-transparent">
+          Features
+        </span>
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-brand to-accent transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#pricing" class="relative group w-fit">
+        <span
+          class="transition duration-300 group-hover:bg-gradient-to-r group-hover:from-brand group-hover:to-accent group-hover:bg-clip-text group-hover:text-transparent">
+          Pricing
+        </span>
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-brand to-accent transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#testimonials" class="relative group w-fit">
+        <span
+          class="transition duration-300 group-hover:bg-gradient-to-r group-hover:from-brand group-hover:to-accent group-hover:bg-clip-text group-hover:text-transparent">
+          Testimonials
+        </span>
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-brand to-accent transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#cta" class="relative group w-fit">
+        <span
+          class="transition duration-300 group-hover:bg-gradient-to-r group-hover:from-brand group-hover:to-accent group-hover:bg-clip-text group-hover:text-transparent">
+          Get Started
+        </span>
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-brand to-accent transition-all duration-300 group-hover:w-full"></span>
+      </a>
+    </nav>
+    <button id="themeToggle" 
+      class="ml-4 px-3 py-2 rounded bg-gradient-to-r from-brand to-accent text-white hover:bg-indigo-700 transition transform hover:scale-105 duration-300">
+      🌙 / ☀️Toggle Theme
+    </button>
+  </div>
+
+  <!-- Sidebar (Mobile Menu) -->
+  <div id="mobile-menu"
+    class="fixed inset-y-0 left-0 w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out z-40">
+    <div class="flex justify-between items-center px-6 py-4 border-b">
+      <span class="text-xl font-bold bg-gradient-to-r from-brand to-accent bg-clip-text text-transparent">Menu</span>
+      <button id="close-menu" class="text-gray-700">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <nav class="flex flex-col space-y-6 font-semibold px-6 py-6">
+      <a href="#features" class="relative group w-fit">
+        <span
+          class="hover:tetransition duration-300 group-hover:bg-gradient-to-r group-hover:from-brand group-hover:to-accent group-hover:bg-clip-text group-xt-transparen">
+          Features
+        </span>
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-brand to-accent transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#pricing" class="relative group w-fit">
+        <span
+          class="transition duration-300 group-hover:bg-gradient-to-r group-hover:from-brand group-hover:to-accent group-hover:bg-clip-text group-hover:text-transparent">
+          Pricing
+        </span>
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-brand to-accent transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#testimonials" class="relative group w-fit">
+        <span
+          class="transition duration-300 group-hover:bg-gradient-to-r group-hover:from-brand group-hover:to-accent group-hover:bg-clip-text group-hover:text-transparent">
+          Testimonials
+        </span>
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-brand to-accent transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#cta" class="relative group w-fit">
+        <span
+          class="transition duration-300 group-hover:bg-gradient-to-r group-hover:from-brand group-hover:to-accent group-hover:bg-clip-text group-hover:text-transparent">
+          Get Started
+        </span>
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-brand to-accent transition-all duration-300 group-hover:w-full"></span>
+      </a>
+    </nav>
+  </div>
+
+  <!-- Overlay when sidebar is open -->
+  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-40 hidden z-30"></div>
+</header>
+
+
+
+
+
+  <!-- Hero Section -->
+  <section class="flex flex-col md:flex-row items-center justify-between px-6 py-16 max-w-7xl mx-auto">
+    <div class="md:w-1/2">
+      <h2 class="text-4xl md:text-5xl font-bold leading-tight">
+        Empower Your Workflow with <span class="bg-gradient-to-r from-brand to-accent bg-clip-text text-transparent font-bold text-4xl">REALTECH</span>
+      </h2>
+      <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">
+        Innovative tech solutions to optimize performance, accelerate collaboration, 
+        and deliver smarter results for modern businesses.
+      </p>
+      <div class="mt-6 flex space-x-4">
+        <a href="#cta" class="px-6 py-3 bg-gradient-to-r from-brand to-accent text-white font-medium rounded hover:bg-indigo-700 transition transform hover:scale-105 duration-300">Get Started</a>
+        <a href="#features" class="px-6 py-3 border border-gray-400 dark:border-gray-500 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition transform hover:scale-105 duration-300">Learn More</a>
+      </div>
+    </div>
+    <div class="md:w-1/2 mt-8 md:mt-0 flex justify-center">
+      <img src="tech.jpeg" alt="TEALTECH Product Logo" class="w-64 md:w-80">
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="px-6 py-16 max-w-7xl mx-auto">
+    <h3 class="text-3xl font-bold text-center mb-12">Our Core Features</h3>
+    <div class="grid gap-8 md:grid-cols-3">
+      <div class="p-6 bg-gray-100 bg-gradient-to-r from-brand to-accent rounded-lg shadow hover:shadow-2xl transition">
+        <div class="text-brand text-4xl mb-4 ">⚡</div>
+        <h4 class="text-xl font-semibold mb-2">High Performance</h4>
+        <p>Experience blazing-fast speeds with cutting-edge infrastructure.</p>
+      </div>
+      <div class="p-6 bg-gray-100 bg-gradient-to-r from-brand to-accent rounded-lg shadow hover:shadow-2xl transition">
+        <div class="text-accent text-4xl mb-4">🔒</div>
+        <h4 class="text-xl font-semibold mb-2">Enterprise Security</h4>
+        <p>Protecting your data with industry-leading security protocols.</p>
+      </div>
+      <div class="p-6 bg-gray-100 bg-gradient-to-r from-brand to-accent rounded-lg shadow hover:shadow-2xl transition">
+        <div class="text-brand text-4xl mb-4">☁️</div>
+        <h4 class="text-xl font-semibold mb-2">Seamless Cloud</h4>
+        <p>Sync and access your work anytime, anywhere with cloud-first design.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="px-6 py-16 bg-gray-50 dark:bg-gray-800">
+    <h3 class="text-3xl font-bold text-center mb-12">Choose Your Plan</h3>
+    <div class="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
+      <!-- Starter -->
+      <div class="p-8 border rounded-lg bg-white dark:bg-gray-900 shadow hover:shadow-lg transition transform hover:scale-105 duration-300">
+        <h4 class="text-xl font-semibold mb-4">Starter</h4>
+        <p class="text-4xl font-bold mb-4">$9<span class="text-lg font-normal">/mo</span></p>
+        <ul class="space-y-2 mb-6">
+          <li>✔ Up to 5 Projects</li>
+          <li>✔ Basic Analytics</li>
+          <li>✔ Email Support</li>
+        </ul>
+        <a href="#cta" class="block w-full py-3 bg-gradient-to-r from-brand to-accent text-center text-white rounded hover:bg-indigo-700 transition">Choose</a>
+      </div>
+      <!-- Pro -->
+      <div class="p-8 border-2  rounded-lg bg-white dark:bg-gray-900 shadow-lg scale-105 transition transform hover:scale-105 duration-300">
+        <h4 class="text-xl font-semibold mb-4">Pro</h4>
+        <p class="text-4xl font-bold mb-4">$29<span class="text-lg font-normal">/mo</span></p>
+        <ul class="space-y-2 mb-6">
+          <li>✔ Unlimited Projects</li>
+          <li>✔ Advanced Analytics</li>
+          <li>✔ Priority Support</li>
+        </ul>
+        <a href="#cta" class="block w-full py-3 bg-gradient-to-r from-brand to-accent text-center text-white rounded hover:bg-indigo-700 transition">Choose</a>
+      </div>
+      <!-- Enterprise -->
+      <div class="p-8 border rounded-lg bg-white dark:bg-gray-900 shadow hover:shadow-lg  transition transform hover:scale-105 duration-300">
+        <h4 class="text-xl font-semibold mb-4">Enterprise</h4>
+        <p class="text-4xl font-bold mb-4">Custom</p>
+        <ul class="space-y-2 mb-6">
+          <li>✔ Dedicated Manager</li>
+          <li>✔ Custom Integrations</li>
+          <li>✔ 24/7 Support</li>
+        </ul>
+        <a href="#cta" class="block w-full py-3 bg-gradient-to-r from-brand to-accent text-center text-white rounded hover:bg-teal-600 transition">Choose</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="px-6 py-16 max-w-6xl mx-auto">
+    <h3 class="text-3xl font-bold text-center mb-12">What Our Clients Say</h3>
+    <div class="grid gap-8 md:grid-cols-2">
+      <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow">
+        <p class="italic">“TEALTECH made collaboration across our teams seamless. We deliver projects faster and smarter.”</p>
+        <h5 class="mt-4 font-semibold">— Sarah, CTO</h5>
+      </div>
+      <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow">
+        <p class="italic">“The best investment we’ve made for productivity. Their cloud sync is a game changer.”</p>
+        <h5 class="mt-4 font-semibold">— James, CEO</h5>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="px-6 py-16 text-center bg-gradient-to-r from-brand to-accent text-white">
+    <h3 class="text-3xl font-bold mb-4">Ready to Transform Your Workflow?</h3>
+    <p class="mb-6">Join innovative teams worldwide using REALTECH to scale smarter.</p>
+    <a href="#" class="px-8 py-3 bg-white text-brand font-semibold rounded hover:bg-gray-100">Start Free Trial</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="px-6 py-6 text-center bg-gray-100 dark:bg-[#0B1120]">
+    <p>© 2025 REALTECH. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
